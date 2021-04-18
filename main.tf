@@ -29,6 +29,9 @@ resource "random_id" "suffix" {
 resource "azurerm_resource_group" "tfstate-rg" {
   name                      = "Terraform-State-RG${random_id.suffix.dec}"
   location                  = "eastus"
+tags = {
+    environment             = "Terraform Remote State Resource Group"
+  }
 }
 
 resource "azurerm_storage_account" "tfstate-sa" {
