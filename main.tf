@@ -42,7 +42,7 @@ resource "azurerm_storage_account" "tfstate-sa" {
   account_replication_type  = "LRS"
 
   tags = {
-    environment             = "Terraform Remote State Store"
+    environment             = "Terraform Remote State "
   }
 }
 
